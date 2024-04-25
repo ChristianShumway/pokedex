@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { ResponsePokemonList } from '../../models/pokemon.model';
 
 @Injectable({
   providedIn: 'root'
@@ -18,9 +19,9 @@ export class PokemonService {
     * Método que obtiene lista de pokemon
     * @returns array pokemon
   */
-  getPokemonList(): Observable<any> {
+  getPokemonList(): Observable<ResponsePokemonList> {
     let req = `${this.url}`
-    return this.http.get<any>(req).pipe(
+    return this.http.get<ResponsePokemonList>(req).pipe(
       catchError( error => {
         return this.getThrowError(error);
       })

@@ -1,9 +1,10 @@
 
 
 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-  <pokemon-card></pokemon-card>
-  <pokemon-card></pokemon-card>
-  <pokemon-card></pokemon-card>
-  <pokemon-card></pokemon-card>
+  <pokemon-card
+    *ngFor="let pokemon of pokemonList; let i = index"
+    [pokemon]="pokemon"
+    [index]="i"
+    (idPokemon)="onShowDataPokemon($event)"></pokemon-card>
 </div>
 
