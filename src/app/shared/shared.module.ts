@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ModalPokemonComponent } from './components/modal-pokemon/modal-pokemon.component';
 import { PrimengModule } from '../primeng/primeng.module';
+import { DateMx } from './pipes/mx.date.pipe';
 
 
 
@@ -11,7 +12,8 @@ import { PrimengModule } from '../primeng/primeng.module';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    ModalPokemonComponent
+    ModalPokemonComponent,
+    DateMx
   ],
   imports: [
     CommonModule,
@@ -20,7 +22,8 @@ import { PrimengModule } from '../primeng/primeng.module';
   exports: [
     HeaderComponent,
     FooterComponent,
-    ModalPokemonComponent
+    ModalPokemonComponent,
+    DateMx
   ]
 })
 export class SharedModule { }

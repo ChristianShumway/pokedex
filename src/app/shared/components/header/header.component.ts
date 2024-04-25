@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
           <img src="./../../../../assets/images/logo.png" class="w-full h-10" alt="Logo sivale" />
         </a>
         <div class="text-white dark:text-gray-400">
-          {{ dateNow | date }}
+          Hoy es: {{ dateNow | dateMx }}
         </div>
       </div>
     </nav>
