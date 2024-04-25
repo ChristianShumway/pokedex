@@ -7,6 +7,7 @@ import { CoreModule } from 'src/app/core/core.module';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { PrimengModule } from 'src/app/primeng/primeng.module';
 import { CardPokemonComponent } from './components/card-pokemon/card-pokemon.component';
+import { DialogService, DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { CardPokemonComponent } from './components/card-pokemon/card-pokemon.com
     SharedModule,
     CoreModule,
     PrimengModule
-  ]
+  ],
+  providers: [DialogService, DynamicDialogRef, DynamicDialogConfig]
 })
 export class PokemonModule { }

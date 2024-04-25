@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { DetailPokemonModel } from 'src/app/core/models/pokemon.model';
 
 @Component({
   selector: 'shared-modal-pokemon',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalPokemonComponent implements OnInit {
 
-  constructor() { }
+  public pokemon!: DetailPokemonModel;
+
+  constructor(
+    public ref: DynamicDialogRef,
+    public config: DynamicDialogConfig
+  ) { }
 
   ngOnInit(): void {
+    if(this.config.data) {
+      this.pokemon = this.config.data.pokemon;
+    }
+  }
+
+  closeModal() {
+    this.ref.close();
   }
 
 }

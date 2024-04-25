@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, throwError } from 'rxjs';
+import { Observable, catchError, map, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { ResponsePokemonList } from '../../models/pokemon.model';
+import { DetailPokemonModel, ResponsePokemonList } from '../../models/pokemon.model';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +22,35 @@ export class PokemonService {
   getPokemonList(): Observable<ResponsePokemonList> {
     let req = `${this.url}`
     return this.http.get<ResponsePokemonList>(req).pipe(
+      catchError( error => {
+        return this.getThrowError(error);
+      })
+    );
+  }
+
+  /**
+    * Método que obtiene detalles del pokemon
+    * @param idPokemon
+    * @returns objeto pokemon
+  */
+  getPokemonById(idPokemon: number): Observable<DetailPokemonModel> {
+    let req = `${this.url}/${idPokemon}`
+    return this.http.get<any>(req).pipe(
+      map( data => {
+        console.log(data);
+        const pokemon: DetailPokemonModel = {
+          img: '',
+          nombre: data.name,
+          tipo: data.types,
+          hp: 'string',
+          ataque: 'string',
+          defensa: 'string',
+          ataqueEspecial: 'string',
+          defensaEspecial: 'string',
+          velocidad: ''
+        }
+        return pokemon;
+      }),
       catchError( error => {
         return this.getThrowError(error);
       })
