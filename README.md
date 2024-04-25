@@ -1,13 +1,27 @@
-# pokedex
-¡Bienvenido a PokéDex! Este repositorio es una herramienta imprescindible para cualquier Entrenador Pokémon en busca de información detallada sobre sus criaturas favoritas. Desde Bulbasaur hasta Zarude, aquí encontrarás una lista exhaustiva de todos los Pokémon existentes hasta la fecha, junto con datos esenciales y curiosidades fascinantes.
+# PruebaPokemon
 
-Contribuciones:
-¡Tu ayuda es crucial para mantener esta PokéDex actualizada y precisa! Si encuentras algún error, quieres agregar información adicional o simplemente deseas contribuir con tus conocimientos sobre Pokémon, ¡no dudes en abrir un pull request!
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
 
-Cómo Contribuir:
-Haz un fork de este repositorio.
-Clona tu fork en tu máquina local.
-Realiza los cambios necesarios.
-Haz commit y push a tu fork.
-Abre un pull request describiendo los cambios propuestos.
-¡Únete a la comunidad de PokéDex y ayuda a hacer que este recurso sea aún más completo y útil para todos los Entrenadores Pokémon!
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
