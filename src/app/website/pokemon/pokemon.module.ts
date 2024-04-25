@@ -6,11 +6,13 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { CoreModule } from 'src/app/core/core.module';
 import { MainPageComponent } from './pages/main-page/main-page.component';
 import { PrimengModule } from 'src/app/primeng/primeng.module';
+import { CardPokemonComponent } from './components/card-pokemon/card-pokemon.component';
 
 
 @NgModule({
   declarations: [
-    MainPageComponent
+    MainPageComponent,
+    CardPokemonComponent
   ],
   imports: [
     CommonModule,
