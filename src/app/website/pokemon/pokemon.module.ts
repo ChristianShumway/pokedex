@@ -5,6 +5,7 @@ import { PokemonRoutingModule } from './pokemon-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { CoreModule } from 'src/app/core/core.module';
 import { MainPageComponent } from './pages/main-page/main-page.component';
+import { PrimengModule } from 'src/app/primeng/primeng.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { MainPageComponent } from './pages/main-page/main-page.component';
     CommonModule,
     PokemonRoutingModule,
     SharedModule,
-    CoreModule
+    CoreModule,
+    PrimengModule
   ]
 })
 export class PokemonModule { }

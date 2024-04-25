@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ModalPokemonComponent } from './components/modal-pokemon/modal-pokemon.component';
+import { PrimengModule } from '../primeng/primeng.module';
 
 
 
@@ -13,7 +14,8 @@ import { ModalPokemonComponent } from './components/modal-pokemon/modal-pokemon.
     ModalPokemonComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PrimengModule
   ],
   exports: [
     HeaderComponent,
