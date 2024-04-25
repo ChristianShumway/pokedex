@@ -19,8 +19,8 @@ export class PokemonService {
     * Método que obtiene lista de pokemon
     * @returns array pokemon
   */
-  getPokemonList(): Observable<ResponsePokemonList> {
-    let req = `${this.url}`
+  getPokemonList(page: number): Observable<ResponsePokemonList> {
+    let req = `${this.url}?offset=${page}`
     return this.http.get<ResponsePokemonList>(req).pipe(
       catchError( error => {
         return this.getThrowError(error);
@@ -37,7 +37,6 @@ export class PokemonService {
     let req = `${this.url}/${idPokemon}`
     return this.http.get<any>(req).pipe(
       map( data => {
-        console.log(data);
         const pokemon: DetailPokemonModel = {
           img: data.sprites.front_default,
           nombre: data.name,

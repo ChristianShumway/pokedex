@@ -10,13 +10,16 @@ export class CardPokemonComponent {
 
   @Input()
   public pokemon!: PokemonModel;
-  @Input()
-  public index!: number;
   @Output()
   public idPokemon = new EventEmitter<number>();
 
-  showPokemon(index: number) {
-    this.idPokemon.emit(index + 1);
+  showPokemon() {
+    const cadena = this.pokemon.url;
+    const ultimoNumero = cadena.match(/\/(\d+)\/$/);
+    if (ultimoNumero !== null) {
+      const idPokemon = parseInt(ultimoNumero[1]);
+      this.idPokemon.emit(idPokemon);
+    }
   }
 
 }
