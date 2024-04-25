@@ -39,15 +39,15 @@ export class PokemonService {
       map( data => {
         console.log(data);
         const pokemon: DetailPokemonModel = {
-          img: '',
+          img: data.sprites.front_default,
           nombre: data.name,
           tipo: data.types,
-          hp: 'string',
-          ataque: 'string',
-          defensa: 'string',
-          ataqueEspecial: 'string',
-          defensaEspecial: 'string',
-          velocidad: ''
+          hp: data.stats[0].base_stat,
+          ataque: data.stats[1].base_stat,
+          defensa: data.stats[2].base_stat,
+          ataqueEspecial: data.stats[3].base_stat,
+          defensaEspecial: data.stats[4].base_stat,
+          velocidad: data.stats[5].base_stat
         }
         return pokemon;
       }),
